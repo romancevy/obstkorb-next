@@ -184,10 +184,6 @@ select {
   .column-padding {
     padding: 4rem 1.5rem 4.75rem;
   }
-  .fancy-image {
-    width: 100%;
-    min-width: 100%;
-  }
   .section-subtitle {
     font-size: 1.25rem;
     line-height: 1.4;
@@ -227,8 +223,6 @@ h4 {
   text-align: center;
   text-decoration: none;
 }
-
-
 
 @media screen and (min-width: 1920px) {
   body {
@@ -370,13 +364,6 @@ p {
 .centered {
   height: 100%;
 }
-.fancy-image {
-  width: 100%;
-  height: 100%;
-  max-width: 42rem;
-  min-width: 100%;
-  object-fit: contain;
-}
 .content-grid {
   display: grid;
   width: 100%;
@@ -443,10 +430,6 @@ p {
   }
   .column-padding {
     padding: 4rem 1.5rem 4.75rem;
-  }
-  .fancy-image {
-    width: 100%;
-    min-width: 100%;
   }
   .content-grid {
     grid-row-gap: 2.5rem;

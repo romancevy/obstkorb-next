@@ -1,0 +1,8 @@
+.productCard {
+  background-color: #fff;
+  background-color: var(--background);
+  color: #000;
+  color: var(--primary);
+  border: solid 0.0625rem currentColor;
+  border-radius: 0.25rem;
+}
