@@ -3,6 +3,78 @@
   background-color: var(--background);
   color: #000;
   color: var(--primary);
-  border: solid 0.0625rem currentColor;
+  border: solid 0.0625rem black;
   border-radius: 0.25rem;
+
+  transition: all 0.14s ease-out;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.productCard img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.productCard header {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 0.0625rem currentColor;
+}
+
+.productCard footer {
+  display: flex;
+}
+
+.productCard footer > *.more {
+  flex-grow: 1;
+}
+
+.productCard footer > *:not(:last-child) {
+  border-right: solid 0.0625rem currentColor;
+}
+
+.productCard footer > * {
+  padding: 0.5rem 1rem;
+}
+
+.more {
+  display: grid;
+  font-size: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, max-content);
+  align-items: center;
+  flex-shrink: 0;
+  grid-gap: 0.25rem;
+  gap: 0.25rem;
+  grid-template-columns: none;
+}
+
+.more:hover {
+  background-color: rgb(39, 186, 39);
+}
+
+.pill {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  background-color: #fff;
+  background-color: var(--background);
+  color: #000;
+  color: var(--primary);
+  border: solid 0.0625rem currentColor;
+  border-radius: 10rem;
+  font-family: inherit;
+  max-width: 100%;
+  min-width: 0;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
