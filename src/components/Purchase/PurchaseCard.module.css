@@ -1,0 +1,28 @@
+.primaryButton {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  --line-height: 1.5rem;
+  padding: 0.75rem 1rem;
+  border: solid 0.0625rem currentColor;
+  color: currentColor;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  display: grid;
+  grid-auto-flow: column;
+  /* grid-auto-columns: minmax(0, -webkit-max-content);
+  grid-auto-columns: minmax(0, max-content); */
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  transition: all 0.14s ease-out;
+}
