@@ -1,0 +1,47 @@
+.productCardGrid {
+  padding: 0 20px;
+  --min-grid-absolute-size: 16rem;
+  --max-grid-relative-size: 33%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      max(
+        min(var(--min-grid-absolute-size), 100%),
+        var(--max-grid-relative-size) - 1rem
+      ),
+      1fr
+    )
+  );
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  border-bottom: 2px solid #000;
+  background-color: #69baff;
+  color: #000;
+}
+
+.section h1 {
+  text-align: center;
+}
+
+.sectionSmall {
+  height: max-content;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .sectionSmall {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}

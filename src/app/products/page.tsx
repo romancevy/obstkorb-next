@@ -1,35 +1,30 @@
+import styles from "./page.module.css";
 import ProductCard from "@/components/Product/ProductCard";
 import { supabase } from "@/supabase";
+import { Product } from "@/types";
 
 const getData = async () => {
-  const { data, error } = await supabase.from("product").select("*");
+  const { data: products, error } = await supabase.from("product").select("*");
   if (error) {
     throw new Error("Failed to fetch data from database");
   }
-  return data;
+  return products;
 };
 
 const ProductsPage = async () => {
-  const data = await getData();
+  const products: Product[] = await getData();
 
   return (
     <>
-      <div className="section bg-blue">
-        <div className="container">
-          <div className="section-intro">
-            <h1>The latest products</h1>
-          </div>
-        </div>
+      <div className={styles.section}>
+        <h1>Our Assortment</h1>
       </div>
-
-      <div className="section small">
-        <div className="container">
-          <ul className="product-card-grid">
-            {data.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </ul>
-        </div>
+      <div className={styles.sectionSmall}>
+        <ul className={styles.productCardGrid}>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </ul>
       </div>
     </>
   );
